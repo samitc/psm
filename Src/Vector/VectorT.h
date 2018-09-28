@@ -34,7 +34,7 @@ void storeVector(const Vector &vec, float &x, float &y, float &z, float &w);
 void storeVector(const Vector &vec, float *data);
 Vector4Data storeVector(const Vector &vec);
 Vector loadZeroVector();
-Vector loadValZeroVector(float x);
+Vector loadValZerosVector(float x);
 Vector loadAllValsVector(float val);
 Vector loadVector(float x, float y, float z, float w);
 Vector loadVectorAlign(const float *data);
