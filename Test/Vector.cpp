@@ -43,7 +43,7 @@ TEST(VectorGeneralTests, loadVector)
 }
 TEST(VectorGeneralTests, loadOneVal)
 {
-    Vector v = loadValZeroVector(8);
+    Vector v = loadValZerosVector(8);
     Vector4Data vals = storeVector(v);
     ASSERT_EQ(8,vals.x);
     ASSERT_EQ(0,vals.y);

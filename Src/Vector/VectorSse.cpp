@@ -37,10 +37,17 @@ Vector loadAllValsVector(float val)
 }
 void storeVector(const Vector &vec, float &x, float &y, float &z, float &w)
 {
+#if defined(LINUX)
+    x = vec[0];
+    y = vec[1];
+    z = vec[2];
+    w = vec[3];
+#elif defined(WINDOWS)
     x = vec.m128_f32[0];
     y = vec.m128_f32[1];
     z = vec.m128_f32[2];
     w = vec.m128_f32[3];
+#endif
 }
 void storeVector(const Vector &vec, float *data)
 {
